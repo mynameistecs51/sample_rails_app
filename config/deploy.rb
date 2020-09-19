@@ -1,10 +1,11 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
 
+set :user, "chaiwat"
 set :application, "sample_rails_app"
-set :repo_url, "https://github.com/JetBrains/sample_rails_app"
-set :branch, "capistrano-deploy"
-set :deploy_to, "/home/deploy/#{fetch :application}"
+set :repo_url, "https://github.com/mynameistecs51/sample_rails_app"
+set :branch, "master"
+set :deploy_to, "/home/#{fetch :user}/#{fetch :application}"
 append :linked_files, "config/master.key"
 
 # Default branch is :master
